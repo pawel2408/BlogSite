@@ -2,23 +2,24 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\PublicPostController;
-use App\Http\Controllers\PublicTagController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SettingController;
-use App\Http\Controllers\InstantController;
-use App\Http\Controllers\FileUploadController;
-use App\Http\Controllers\EmbedController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TagController;
-use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\LikeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EmbedController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FollowsController;
+use App\Http\Controllers\InstantController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\PublicTagController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\PublicPostController;
 
 Route::get('admin', [AdminController::class, 'index'])->name('admin');
 

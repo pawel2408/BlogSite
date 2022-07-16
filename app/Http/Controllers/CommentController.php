@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comment;
-use App\Models\User;
-use App\Models\Post;
-use App\Notifications\UserNotified;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Str;
 use Validator;
+use App\Models\Post;
+use App\Models\User;
+use App\Models\Comment;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Notifications\UserNotified;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 
 class CommentController extends Controller
