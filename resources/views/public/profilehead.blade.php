@@ -19,48 +19,13 @@
                 @endisset
             </h6>
             <h6>
-                @lang('messages.user.level') 
-                <span class="badge bg-secondary">{{ levelNumber($point->sum('likes_count')) }}</span>
-                <span class="ms-2">@lang('messages.user.points') </span>
-                <span class="badge bg-secondary">{{ $point->sum('likes_count') }}</span>
                 <span class="ms-2">@lang('messages.new.totalposts') </span>
                 <span class="badge bg-secondary">{{ shortNumber($user->posts()->count()) }}</span>
             </h6>
         </div>
     </div>
     <div class="col-lg-4 pt-lg-3">
-        <ul class="profile-links-list d-flex justify-content-center">
-            @isset($user->website)
-            <li class="nowrap">
-            <a  role="button" class="btn btn-white-shadow" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Website" href="{{ $user->website }}">
-                <i class="icon-globe"></i></a>
-            </li>
-            @endisset
-            @isset($user->facebook)
-            <li class="nowrap">
-            <a  role="button" class="btn btn-white-shadow" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Facebook" href="https://www.facebook.com/{{ $user->facebook }}">
-                <i class="icon-facebook"></i></a>
-            </li>
-            @endisset
-            @isset($user->twitter)
-            <li class="nowrap">
-            <a  role="button" class="btn btn-white-shadow" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Twitter" href="https://twitter.com/{{ $user->twitter }}">
-                <i class="icon-twitter"></i></a>
-            </li>
-            @endisset
-            @isset($user->instagram)
-            <li class="nowrap">
-            <a  role="button" class="btn btn-white-shadow" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Instagram" href="https://www.instagram.com/{{ $user->instagram }}">
-                <i class="icon-instagram"></i></a>
-            </li>
-            @endisset
-            @isset($user->linkedin)
-            <li class="nowrap">
-            <a  role="button" class="btn btn-white-shadow" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom" title="LinkEdin" href="{{ $user->linkedin }}">
-                <i class="icon-linkedin"></i></a>
-            </li>
-            @endisset
-        </ul>
+        {{--  --}}
     </div>
     <div class="col-lg-2 pt-lg-5 mt-3">
     @if (auth()->check())

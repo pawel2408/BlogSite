@@ -36,10 +36,5 @@
           @csrf
         </form>
     </ul>
-
-    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-5 mb-1 text-muted">
-      <span>Instant Blog V.3.1</span>
-    </h6>
-    
   </div>
 </nav>

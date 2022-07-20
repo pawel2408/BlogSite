@@ -9,7 +9,7 @@
   <!-- Example row of columns -->
     <div class="content">
         <div class="alert alert-warning" role="alert">
-      		<strong>Nothing was found!</strong> Back to <a href="{{ url('/') }}">Home</a>.
+      		<strong>Nic nie znaleziono!</strong> Przejdź na <a href="{{ url('/') }}">Stronę domową</a>.
     	</div>
     </div>
   </div> <!-- /container -->

@@ -60,30 +60,6 @@
                             <input type="text" class="form-control" id="website" name="website" value="{{ $user->website }}">
                         </div>
                     </div>
-                     <div class="mb-3 row">
-                        <label for="facebook" class="col-sm-3 col-form-label">@lang('messages.new.facebook')</label>
-                        <div class="col-sm-9">
-                                <input type="text" class="form-control" id="facebook" name="facebook" value="{{ $user->facebook }}" placeholder="@lang('messages.login.username')">                         
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="twitter" class="col-sm-3 col-form-label">@lang('messages.new.twitter')</label>
-                        <div class="col-sm-9">
-                                <input type="text" class="form-control" id="twitter" name="twitter" value="{{ $user->twitter }}" placeholder="@lang('messages.login.username')">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="instagram" class="col-sm-3 col-form-label">@lang('messages.new.instagram')</label>
-                        <div class="col-sm-9">
-                                <input type="text" class="form-control" id="instagram" name="instagram" value="{{ $user->instagram }}" placeholder="@lang('messages.login.username')">
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <label for="linkedin" class="col-sm-3 col-form-label">@lang('messages.new.linkedin')</label>
-                        <div class="col-sm-9">
-                                <input type="text" class="form-control" id="linkedin" name="linkedin" value="{{ $user->linkedin }}">
-                        </div>
-                    </div>
                     <div class="mb-3 row">
                         <div class="offset-sm-4 col-sm-7">
                             <button type="submit" class="btn btn-primary">@lang('messages.save')</button>

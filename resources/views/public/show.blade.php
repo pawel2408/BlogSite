@@ -158,20 +158,6 @@
                 <div class="card-body card-border">
                     <div class="row">
                         <div class="d-flex align-items-center">
-                            <div class="d-flex align-items-center ps-2 pe-2 me-4">
-                                @if (auth()->check())
-                                    @if ($post->isLiked)
-                                        <div class="heart heartliked" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                                    @else
-                                        <div class="heart" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                                    @endif
-                                @else
-                                <a class="d-flex align-items-center" href="{{url('/login/')}}" >
-                                    <span class="heartguest"></span>
-                                </a>
-                                @endif
-                                <div class="likenumber" id="likeCount{{ $post->id }}">{{ shortNumber($post->likes()->count()) }}</div>
-                            </div>
                             <div class="ps-2 pe-2">
                                 <span class="text-muted"><i class="icon-eye me-2"></i> {{ shortNumber($post->counter) }}</span>
                             </div>

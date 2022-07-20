@@ -146,23 +146,6 @@
                 @include('posts.tagselect')
                 <div id="dynamic_field">
                 </div>
-
-                <div class="mb-3 row mb-5">
-                    <label class="offset-md-1 col-md-2 col-form-label"><strong>@lang('messages.form.more') </strong> <a href="#" data-bs-toggle="modal" data-bs-target="#helpModal"><i class="icon-info-circle"></i></a>
-                    </label>
-                    <div class="col-md-7">             
-                        <button onclick="addNew('header_add')" type="button" name="header_add" class="btn btn-lg btn-light btnadd me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addheading')"><i class="icon-type-h1"></i></button>
-                        <button onclick="addNew('txt_add')" type="button" name="txt_add" class="btn btn-lg btn-light btnadd me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addsimple')"><i class="icon-fonts"></i></button>
-                        <button onclick="addText()" type="button" id="texteditor" class="btn btn-lg btn-light me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addeditor')"><i class="icon-textarea-t"></i></button>
-                        <button onclick="addNew('img_add')" type="button" name="img_add" class="btn btn-lg btn-light btnadd me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addimage')"><i class="icon-image"></i></button>
-                        <button onclick="addNew('youtube_add')" type="button" name="youtube_add" class="btn btn-lg btn-light btnadd me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addyoutube')"><i class="icon-youtube"></i></button>
-                        <button onclick="addNew('tweet_add')" type="button" name="tweet_add" class="btn btn-lg btn-light btnadd me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addtweet')"><i class="icon-twitter"></i></button>
-                        <button onclick="addNew('face_add')" type="button" name="face_add" class="btn btn-lg btn-light btnadd me-1" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addfb')"><i class="icon-facebook"></i></button>
-                        <button onclick="addNew('instagram_add')" type="button" name="instagram_add" class="btn btn-lg btn-light btnadd" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addinst')"><i class="icon-instagram"></i></button>
-                        <button onclick="addNew('pinterest_add')" type="button" name="pinterest_add" class="btn btn-lg btn-light btnadd" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addpin')"><i class="icon-pinterest"></i></button>
-                        <button onclick="addNew('tiktok_add')" type="button" name="tiktok_add" class="btn btn-lg btn-light btnadd" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.form.addtiktok')"><i class="icon-tiktok"></i></button>
-                    </div>
-                </div>
                 <div id="subbtn" class="mb-3 row mb-5">
                     <div class="offset-md-3 col-md-7">
                         <div id="show-err-msg" class="text-danger print-error-msg d-none">
@@ -172,63 +155,6 @@
                     </div>
                 </div>
             </form>
-            <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">@lang('messages.form.addex')</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <table class="table table-sm">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Heading</th>
-                                        <td class="font-italic">This is my Heading.</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Text</th>
-                                        <td class="font-italic">This is my text.</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Text Editor</th>
-                                        <td class="font-italic">This is my <strong>text</strong> with style.</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Image</th>
-                                        <td class="font-italic">Upload Image here.</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Youtube</th>
-                                        <td class="font-italic">https://www.youtube.com/watch?v=_38JDGnr0vA</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Tweet</th>
-                                        <td class="font-italic">https://twitter.com/Interior/status/463440424141459456</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Facebook</th>
-                                        <td class="font-italic">https://www.facebook.com/20531316728/posts/10154009990506729/</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Instagram</th>
-                                        <td class="font-italic">https://www.instagram.com/p/tsxp1hhQTG/</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Pinterest</th>
-                                        <td class="font-italic">https://www.pinterest.com/pin/99360735500167749/</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Tiktok</th>
-                                        <td class="font-italic">https://www.tiktok.com/@scout2015/video/6718335390845095173</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
             @include('posts.formfields')    
         </div>
     </div>

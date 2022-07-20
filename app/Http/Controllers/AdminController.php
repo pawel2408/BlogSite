@@ -14,10 +14,10 @@ class AdminController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('can:admin-area');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('can:admin-area');
+    // }
 
     /**
      * Show the application dashboard.

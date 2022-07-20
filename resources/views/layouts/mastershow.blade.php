@@ -36,8 +36,8 @@
 
         <!-- Css styles-->
         <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('/css/instant.css') }}" rel="stylesheet">  
-        <link href="{{ asset('/instanticon/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('/css/myStyle.css') }}" rel="stylesheet">  
+        <link href="{{ asset('/icons/style.css') }}" rel="stylesheet">
         @if (!empty($setting->site_analytic))
             {!! $setting->site_analytic !!}
         @endif

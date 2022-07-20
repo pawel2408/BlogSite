@@ -28,18 +28,8 @@
 </div>
 @endsection
 @section('content')
-<div id="se-pre-con" class="d-flex justify-content-center align-items-center">
-    <div class="spinner-grow me-1 text-danger" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-    <div class="spinner-grow me-1 text-warning" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-    <div class="spinner-grow me-1 text-info" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-</div>
-<div id="maincontent" class="container-fluid mt-5 d-none">
+
+<div id="maincontent" class="container-fluid mt-5">
     <div class="row mt-2">
         <div class="grid" data-columns>
             @forelse($posts as $key => $post)      

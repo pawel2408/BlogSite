@@ -17,10 +17,6 @@
                 <a class="nav-link d-md-none" href="{{ url('/') }}"><i class="icon-house-door"></i> @lang('messages.hometxt')</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link me-3 d-none d-md-block {{ Request::is('popular') ? 'active' : '' }}" href="{{ url('/popular') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.populartxt')"><i class="icon-heart nav-icon"></i></a>
-                <a class="nav-link d-md-none" href="{{ url('/popular') }}"><i class="icon-heart"></i> @lang('messages.populartxt')</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link me-3 d-none d-md-block {{ Request::is('categories') ? 'active' : '' }}" href="{{ url('/categories') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.categoriestxt')"><i class="icon-grid nav-icon"></i></a>
                 <a class="nav-link d-md-none" href="{{ url('/categories') }}"><i class="icon-grid"></i> @lang('messages.categoriestxt')</a>
             </li>
@@ -37,7 +33,7 @@
             @unless (auth()->check())
             <li class="nav-item">
                 <a class="nav-link me-3 d-none d-md-block {{ Request::is('login') ? 'active' : '' }}" href="{{ url('/login') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" title="@lang('messages.logintxt')"><i class="icon-person-circle nav-icon"></i></a>
-                <a class="nav-link d-md-none" href="{{ url('/login') }}"><i class="icon-person-circle"></i> @lang('messages.logintxt')</a>
+                <a class="nav-link d-md-none" href="{{ url('/login') }}"><i class="icon-person-circle"></i> @lang('messages.logintxt')</a> 
             </li>
             @else          
             @can('admin-area')

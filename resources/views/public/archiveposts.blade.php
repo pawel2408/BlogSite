@@ -3,18 +3,8 @@
     <body class="d-flex flex-column h-100">
 @endsection
 @section('content')
-<div id="se-pre-con" class="d-flex justify-content-center align-items-center">
-    <div class="spinner-grow me-1 text-danger" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-    <div class="spinner-grow me-1 text-warning" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-    <div class="spinner-grow me-1 text-info" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-</div>
-<div id="maincontent" class="container-fluid mt-5 d-none">
+
+<div id="maincontent" class="container-fluid mt-5">
     @php
     $enmonth = Request::get('month');
     $month = Carbon\Carbon::parse($enmonth);

@@ -3,7 +3,6 @@
 @section('bodyclass')
     <body>
 @endsection
-@if ($setting->site_instant == 1)
 @section('jumbotron')
 <div class="jumbotron bg-none">
     <div class="container">
@@ -62,22 +61,6 @@
                 </div>
             </form>
         </div>
-        <div class="col-md-1 pt-md-5">
-            <div class="ordiv mt-3">
-                <strong>OR</strong>
-            </div>
-        </div>
-        <div class="col-md-3 mt-5">
-             <div class="sociallogin mb-3">
-                <a role="button" class="btn btn-face-login social" href="{{ url('/auth/facebook') }}" ><img src="{{ url('/images/facebook_logo.png') }}" class="me-2"> @lang('messages.login.facebook')</a>
-            </div>
-             <div class="sociallogin">
-                <a role="button" class="btn btn-google-login social" href="{{ url('/auth/google') }}" ><img src="{{ url('/images/google_logo.png') }}" width="37" class="me-3"> @lang('messages.login.google')</a>
-            </div>
-        </div>
     </div>
 </div>
 @endsection
-@else
-@include('member.information')
-@endif

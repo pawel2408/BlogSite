@@ -5,11 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
+
         <link rel="icon" href="{{ asset('../../favicon.ico') }}">
         <title>@lang('admin.adminpanel')</title>
+        
         <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
-        <link href="{{ asset('/instanticon/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('/icons/style.css') }}" rel="stylesheet">
         <link href="{{ asset('/quill/dist/quill.snow.css') }}" rel="stylesheet">
     </head>
     <body>

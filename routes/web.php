@@ -13,7 +13,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EmbedController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FollowsController;
-use App\Http\Controllers\InstantController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\PublicTagController;
@@ -28,13 +27,8 @@ Route::get('posts/{post}', [PublicPostController::class, 'show']);
 Route::get('archives', [PublicPostController::class, 'archives']);
 Route::get('archiveposts', [PublicPostController::class, 'archiveposts']);
 Route::get('popular', [PublicPostController::class, 'popular']);
-Route::get('facebook/facebook-rss', [PublicPostController::class, 'facebookShow']);
-Route::get('posts/{post}/amp', [PublicPostController::class, 'ampShow']);
 Route::get('page/{page}', [PublicPostController::class, 'showPage']);
-Route::get('feed', [PublicPostController::class, 'feedControl']);
 Route::get('search', [PublicPostController::class, 'search']);
-
-Route::post('post/{id}/click', [LikeController::class, 'likePost']);
 
 Route::get('categories', [PublicTagController::class, 'tags']);
 Route::get('/category/{tag}', [PublicTagController::class, 'index']);
@@ -57,11 +51,6 @@ Route::put('settings/{id}', [SettingController::class, 'update']);
 Route::get('home', [HomeController::class, 'index'])->name('home');
 Route::get('home/add', [HomeController::class, 'addpost']);
 
-Route::post('siteinstant', [InstantController::class, 'siteCheck']);
-Route::get('deactivate', [InstantController::class, 'deactivatePage']);
-Route::get('deactivation-result', [InstantController::class, 'deactivateResult']);
-Route::post('deactivateinstant', [InstantController::class, 'deactivateScript']);
-
 Route::post('admincp/uploadImg', [FileUploadController::class, 'postImage']);
 Route::post('admincp/deleteImg', [FileUploadController::class, 'deleteFile']);
 
@@ -83,7 +72,7 @@ Route::resource('profile', ProfileController::class);
 Route::get('auth/{driver}', [LoginController::class, 'redirectToProvider']);
 Route::get('auth/{driver}/callback', [LoginController::class, 'handleProviderCallback']);
 
-Route::get('instant/clear', function() {
+Route::get('blogsite/clear', function() {
    Artisan::call('cache:clear');
    Artisan::call('config:clear');
    Artisan::call('view:clear');

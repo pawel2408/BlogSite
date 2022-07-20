@@ -123,42 +123,8 @@ class PublicPostController extends Controller
         return view('public.index', compact('posts'));
     }
 
-    //Show single post for facebook
-    public function facebookShow()
-    {
-        $posts = Post::latest()
-            ->wherePostLive(1)
-            ->take(10)
-            ->get();
-
-        return view('public.facerss', compact('posts'));
-    }
-
-    //Show single post for facebook
-    public function ampShow(Post $post)
-    {
-        $related = Post::inRandomOrder()
-            ->wherePostLive(1)
-            ->where('id', '!=', $post->id)
-            ->take(5)
-            ->get();
-            
-        return view('public.showamp', compact('post', 'related'));
-    }
-
     public function showPage(Page $page)
     {
         return view('public.showpage', compact('page'));
-    }
-
-    public function feedControl()
-    {
-        $posts = Post::latest()
-            ->wherePostLive(1)
-            ->paginate(30);
-
-        return response()
-            ->view('public.feed', compact('posts'))
-            ->header('Content-Type', 'application/xml');
     }
 }

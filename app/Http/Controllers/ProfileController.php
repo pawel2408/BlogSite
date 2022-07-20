@@ -28,7 +28,6 @@ class ProfileController extends Controller
         $point = Post::wherePostLive(1)
             ->select('user_id')
             ->whereUserId($user->id)
-            ->withCount('likes')
             ->get();
 
         return view('public.profile', compact('user', 'posts', 'point'));
@@ -62,7 +61,6 @@ class ProfileController extends Controller
         $point = Post::wherePostLive(1)
             ->select('user_id')
             ->whereUserId($user->id)
-            ->withCount('likes')
             ->get();
             
         return view('member.profileedit', compact('user', 'point'));
@@ -146,7 +144,6 @@ class ProfileController extends Controller
         $point = Post::wherePostLive(1)
             ->select('user_id')
             ->whereUserId($user->id)
-            ->withCount('likes')
             ->get();
 
         $followers = $user->followers()->paginate(30);
@@ -159,7 +156,6 @@ class ProfileController extends Controller
         $point = Post::wherePostLive(1)
             ->select('user_id')
             ->whereUserId($user->id)
-            ->withCount('likes')
             ->get();
 
         $follows = $user->follows()->paginate(30);

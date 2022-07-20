@@ -33,20 +33,6 @@
                         </div>
                     @endisset
                 </a>
-                 <div class="card-like">
-                @if (auth()->check())
-                    @if ($post->isLiked)
-                        <div class="heart heartliked" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                    @else
-                        <div class="heart" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                    @endif
-                @else
-                    <a href="{{url('/login/')}}" >
-                        <div class="heartguest"></div>
-                    </a>
-                @endif
-                <div class="card-count" id="likeCount{{ $post->id }}">{{ shortNumber($post->likes()->count()) }}</div>
-                </div>
             </div>
         </div>
     </div>
@@ -81,20 +67,6 @@
                         </div>
                     @endisset
                 </a>
-                <div class="card-like">
-                @if (auth()->check())
-                    @if ($post->isLiked)
-                        <div class="heart heartliked" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                    @else
-                        <div class="heart" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                    @endif
-                @else
-                    <a href="{{url('/login/')}}" >
-                        <div class="heartguest"></div>
-                    </a>
-                @endif
-                <div class="card-count" id="likeCount{{ $post->id }}">{{ shortNumber($post->likes()->count()) }}</div>
-                </div>
             </div>
         </div>
         @else
@@ -129,20 +101,6 @@
                         </div>
                     @endisset
                 </a>
-                 <div class="card-like">
-                @if (auth()->check())
-                    @if ($post->isLiked)
-                        <div class="heart heartliked" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                    @else
-                        <div class="heart" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                    @endif
-                @else
-                    <a href="{{url('/login/')}}" >
-                        <div class="heartguest"></div>
-                    </a>
-                @endif
-                <div class="card-count" id="likeCount{{ $post->id }}">{{ shortNumber($post->likes()->count()) }}</div>
-                </div>
                 </div>
             </div>
         </div>
@@ -153,20 +111,6 @@
             <small class="me-3"><i class="icon-clock me-2"></i> {{ $post->created_at->diffForHumans() }}</small>
             <small><i class="icon-eye me-2"></i> {{ shortNumber($post->counter) }}</small>
             <a class="link-over" href="{{url('/posts/' . $post->post_slug)}}"></a>
-            <div class="card-like">
-            @if (auth()->check())
-                @if ($post->isLiked)
-                    <div class="heart heartliked" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                @else
-                    <div class="heart" onclick="ClickHeart(this)" id="heart{{ $post->id }}"></div>
-                @endif
-            @else
-                <a href="{{url('/login/')}}" >
-                    <div class="heartguest"></div>
-                </a>
-            @endif
-            <div class="card-count" id="likeCount{{ $post->id }}">{{ shortNumber($post->likes()->count()) }}</div>
-            </div>
             @if (count($post->tags))
                 <div class="category">
                     @foreach ($post->tags as $tag)

@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="{{ $theme }}">
-<html lang="en" class="">    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="{{ !empty($tag->desc) ? $tag->desc : $setting->site_desc }}">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <meta property="fb:pages" content="{{ env('FACEBOOK_PAGE_ID') }}" />
-        <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
-        <title>{{ $setting->site_name . ' - ' . $setting->site_title }}</title>        
-        <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('/css/instant.css') }}" rel="stylesheet">
-        <link href="{{ asset('/instanticon/style.css') }}" rel="stylesheet">
-        @yield('css')
-        @if (!empty($setting->site_analytic))
-            {!! $setting->site_analytic !!}
-        @endif
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{ !empty($tag->desc) ? $tag->desc : $setting->site_desc }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta property="fb:pages" content="{{ env('FACEBOOK_PAGE_ID') }}" />
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <title>{{ $setting->site_name . ' - ' . $setting->site_title }}</title>        
+    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/myStyle.css') }}" rel="stylesheet">
+    <link href="{{ asset('/icons/style.css') }}" rel="stylesheet">
+</head>
     @yield('bodyclass')
 
         @include('layouts.nav')
@@ -49,12 +45,5 @@
         @include('layouts.footer')
         <script src="{{ asset('/js/main.js') }}"></script>
         @stack('scripts')
-        <script>
-            document.addEventListener('DOMContentLoaded', function(){
-                document.getElementById('se-pre-con').style.visibility = 'hidden'; 
-                var element = document.getElementById('maincontent');
-                element.classList.remove('d-none');
-            }, false);
-        </script>
     </body>
 </html>
