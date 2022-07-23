@@ -32,12 +32,12 @@ class CreateSettingsTable extends Migration
             $table->text('post_ads')->nullable();
             $table->text('page_ads')->nullable();
             $table->text('between_ads')->nullable();
-            $table->boolean('fb_publishing')->default(0);
-            $table->string('fb_theme', 191)->default('default');
-            $table->text('fb_ads_code')->nullable();
-            $table->text('fb_page_token')->nullable();
-            $table->boolean('amp_ad_server')->default(0);
-            $table->text('amp_adscode')->nullable();
+            // $table->boolean('fb_publishing')->default(0);
+            // $table->string('fb_theme', 191)->default('default');
+            // $table->text('fb_ads_code')->nullable();
+            // $table->text('fb_page_token')->nullable();
+            // $table->boolean('amp_ad_server')->default(0);
+            // $table->text('amp_adscode')->nullable();
             $table->text('footer')->nullable();
             $table->text('site_analytic')->nullable();
             $table->boolean('site_instant')->default(0);

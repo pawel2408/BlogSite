@@ -23,9 +23,9 @@ class CreateUsersTable extends Migration
             $table->string('avatar', 191)->default('defaultuser.png');
             $table->string('password', 191);
             $table->string('website', 191)->nullable();
-            $table->string('facebook', 191)->nullable();
-            $table->string('twitter', 191)->nullable();
-            $table->string('instagram', 191)->nullable();
+            // $table->string('facebook', 191)->nullable();
+            // $table->string('twitter', 191)->nullable();
+            // $table->string('instagram', 191)->nullable();
             $table->string('linkedin', 191)->nullable();
             $table->rememberToken();
             $table->timestamps();
