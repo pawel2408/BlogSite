@@ -8,21 +8,6 @@
             <li class="nav-item">
                 <a class="nav-link active" data-bs-toggle="tab" href="#mainsettings" role="tab">@lang('admin.main')</a>
             </li>
-            {{-- <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#optional" role="tab">@lang('admin.optional')</a>
-            </li> --}}
-            {{-- <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#adsense" role="tab">@lang('admin.adsense')</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#facebook" role="tab">@lang('admin.faceinstant')</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#google" role="tab">@lang('admin.googleamp')</a>
-            </li> --}}
-            {{-- <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#cookie" role="tab">@lang('admin.cookie')</a>
-            </li> --}}
         </ul>
     </div>
     <div class="row box-white ms-3 me-3 mt-2 shadow-sm">  

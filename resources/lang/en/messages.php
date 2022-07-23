@@ -108,7 +108,7 @@ return [
      */
     'comments' => [
         'comments' => 'Komentarze',
-        'postcomment' => 'Zamieszczone komentarze',
+        'postcomment' => 'Dodaj komentarz',
         'logincomment' => 'Zaloguj aby dodać komentarz',
         'writecomment' => 'Napisz komentarz',
         'success' => 'Komentarz dodany',
@@ -176,7 +176,7 @@ return [
         'addinst' => 'Dodaj Instagram Post',
         'addpin' => 'Dodaj Pinterest Post',
         'addtiktok' => 'Dodaj Tiktok Video',
-        'submit' => 'Publikuj',
+        'submit' => 'Wyślij',
         'addex' => 'Dodaj więcej przykładów',
         'nofound' => 'Nic nie znaleziono',
         'heading' => 'Nagłówek',

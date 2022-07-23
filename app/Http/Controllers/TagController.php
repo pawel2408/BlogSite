@@ -47,7 +47,7 @@ class TagController extends Controller
         Tag::create($attributes);
 
         session()->flash('message', 'Category Created!');
-        return redirect('/cats');
+        return redirect('/categories');
     }
 
     public function show($id)
@@ -95,7 +95,7 @@ class TagController extends Controller
         $tag->update($attributes);
 
         session()->flash('message', 'Category Updated!');
-        return redirect('/cats');
+        return redirect('/categories');
     }
 
     public function destroy($id)
@@ -108,6 +108,6 @@ class TagController extends Controller
         $tag->posts()->detach();
         $tag->delete();
         session()->flash('message', 'Category Deleted!');
-        return redirect('/cats');
+        return redirect('/categories');
     }
 }

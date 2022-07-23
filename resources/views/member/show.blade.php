@@ -3,7 +3,7 @@
     <body>
 @endsection
 @section('jumbotron')
-<div class="jumbotron bg-none">
+<div class="jumbotron">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-12">
